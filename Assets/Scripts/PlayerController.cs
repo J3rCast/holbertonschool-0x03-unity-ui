@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
 			winLoseText.color = Color.white;
 			winLoseImage.color = Color.red;
 			winLoseImage.gameObject.SetActive(true);
-			// SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			StartCoroutine(LoadScene(3));
 		}
     }
 
@@ -82,5 +82,11 @@ public class PlayerController : MonoBehaviour
 	void SetHealthText()
 	{
 		healthText.text = "Health: " + health;
+	}
+
+	IEnumerator LoadScene(float seconds)
+	{
+		yield return new WaitForSeconds(seconds);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }
