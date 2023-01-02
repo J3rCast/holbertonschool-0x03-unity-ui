@@ -25,6 +25,11 @@ public class PlayerController : MonoBehaviour
 			winLoseImage.gameObject.SetActive(true);
 			StartCoroutine(LoadScene(3));
 		}
+		
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			SceneManager.LoadScene("menu");
+		}
     }
 
     void FixedUpdate()
