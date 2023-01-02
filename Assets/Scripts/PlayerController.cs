@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 	private int score = 0;
 	public int health = 5;
 	public Text scoreText;
+	public Text healthText;
 
     void Update()
     {
@@ -49,7 +50,7 @@ public class PlayerController : MonoBehaviour
 		if (other.gameObject.tag == "Trap")
 		{
 			health -= 1;
-			Debug.Log("Health: " + health);
+			SetHealthText();
 		}
 
 		if (other.gameObject.tag == "Pickup")
@@ -68,5 +69,10 @@ public class PlayerController : MonoBehaviour
 	void SetScoreText()
 	{
 		scoreText.text = "Score: " + score;
+	}
+
+	void SetHealthText()
+	{
+		healthText.text = "Health: " + health;
 	}
 }
