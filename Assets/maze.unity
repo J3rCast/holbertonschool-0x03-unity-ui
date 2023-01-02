@@ -1301,7 +1301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &239796694
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2782,7 +2782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &708152798
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5733,6 +5733,8 @@ MonoBehaviour:
   health: 5
   scoreText: {fileID: 899152440}
   healthText: {fileID: 1183405647}
+  winLoseImage: {fileID: 708152799}
+  winLoseText: {fileID: 239796695}
 --- !u!1 &1277474066
 GameObject:
   m_ObjectHideFlags: 0

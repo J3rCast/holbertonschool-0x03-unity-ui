@@ -12,13 +12,18 @@ public class PlayerController : MonoBehaviour
 	public int health = 5;
 	public Text scoreText;
 	public Text healthText;
+	public Image winLoseImage;
+	public Text winLoseText;
 
     void Update()
     {
 		if (health == 0)
 		{
-			Debug.Log("Game Over!");
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+			winLoseText.text = "Game Over!";
+			winLoseText.color = Color.white;
+			winLoseImage.color = Color.red;
+			winLoseImage.gameObject.SetActive(true);
+			// SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
     }
 
@@ -62,7 +67,10 @@ public class PlayerController : MonoBehaviour
 
 		if (other.gameObject.tag == "Goal")
 		{
-			Debug.Log("You win!");
+			winLoseText.text = "You Win!";
+			winLoseText.color = Color.black;
+			winLoseImage.color = Color.green;
+			winLoseImage.gameObject.SetActive(true);
 		}
 	}
 
