@@ -71,6 +71,7 @@ public class PlayerController : MonoBehaviour
 			winLoseText.color = Color.black;
 			winLoseImage.color = Color.green;
 			winLoseImage.gameObject.SetActive(true);
+			StartCoroutine(LoadScene(3));
 		}
 	}
 
