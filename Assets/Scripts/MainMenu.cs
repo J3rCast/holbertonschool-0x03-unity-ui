@@ -8,20 +8,15 @@ public class MainMenu : MonoBehaviour
 {
 	public Button playButton;
 	public Button quitButton;
-	public Button optionsButton;
-	public GameObject optionsMenu;
 	public Material trapMat;
 	public Material goalMat;
 	public Toggle colorblindMode;
-	public Button backButton;
 
     // Start is called before the first frame update
     void Start()
     {
         playButton.onClick.AddListener(PlayMaze);
         quitButton.onClick.AddListener(QuitMaze);
-        optionsButton.onClick.AddListener(Options);
-		backButton.onClick.AddListener(Back);
     }
 
     // Update is called once per frame
@@ -49,17 +44,5 @@ public class MainMenu : MonoBehaviour
 	{
 		Debug.Log("Quit Game");
 		Application.Quit();
-	}
-
-	public void Options()
-	{
-		optionsMenu.SetActive(true);
-		gameObject.SetActive(false);
-	}
-
-	public void Back()
-	{
-		optionsMenu.SetActive(false);
-		gameObject.SetActive(true);
 	}
 }
